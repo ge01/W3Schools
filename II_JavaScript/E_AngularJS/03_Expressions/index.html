@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="em-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <title>JavaScript Date Methods </title>
+    <meta charset="utf-8">
+    <!-- Bootstrap 3 is mobile-first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- angularjs library  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  </head>
+  <body>
+    <!---->
+    <div ng-app="">
+     	<p>My first expression: {{ 5 + 7 }}</p>
+
+      <div ng-init="myCol='lightblue'">
+      <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+      </div>
+
+      <div ng-init="quantity=2; cost=5">
+        <p>Total in dollar: {{quantity * cost}}</p>
+        <p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+      </div>
+
+      <div ng-init="firstName='John';lastName='Doe'">
+        <p>The name is {{firstName + " " + lastName}}</p>
+      </div>
+
+      <div ng-init="person={firstName: 'John', lastName: 'Doe'}">
+        <p>The name is <span ng-bind="person.lastName"></span></p>
+      </div>
+
+      <div ng-init="points=[1,15,19,2,40]">
+        <p>The third result is {{points[2]}}</p>
+        <p>The third result is <span ng-bind="points[2]"></span></p>
+      </div>
+    </div>
+
+
+
+    <!-- NOTE: This tag connects the JS to our HTML-->
+    <script src="app.js"></script>
+
+  </body>
+</html>
