@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="em-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <title>JavaScript Date Methods </title>
+    <meta charset="utf-8">
+    <!-- Bootstrap 3 is mobile-first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- angularjs library  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  </head>
+  <body>
+    <!---->
+    <!-- The ng-app directive tells AngularJS that the <div> element is the "owner"
+    of an Angular JS application -->
+    <div ng-app="">
+      <!-- The ng-model directive binds the value of the input field to the application variable name -->
+      <p>Name : <input type="text" ng-model="name" /></p>
+      <!-- The ng-bind directive binds the innerHTML of the <p> element to the
+      application variable name -->
+      <p ng-bind="name"></p>
+
+      <div ng-app="" ng-init="firstName='John'">
+        <p>The name is <span ng-bind="firstName"></span></p>
+      </div>
+
+      <div ng-app="">
+        <p>My first expression: {{ 5 + 5 }}</p>
+      </div>
+
+      <div>
+        <p>My first expression: {{ 5 + 5 }}</p>
+      </div>
+
+
+    </div>
+
+    <div ng-app="" ng-init="firstName='John'">
+      <p>The name is <span ng-bind="firstName"></span></p>
+    </div>
+
+    <div ng-app="">
+ 	    <p>My first expression: {{ 5 + 5 }}</p>
+    </div>
+
+    <p>Try to change the names.</p>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+    <br>
+    Full Name: {{firstName + " " + lastName}}
+
+    </div>
+
+
+
+
+    <!-- NOTE: This tag connects the JS to our HTML-->
+    <script src="app.js"></script>
+
+  </body>
+</html>
